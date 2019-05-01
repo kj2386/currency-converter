@@ -1,4 +1,4 @@
-<a href="https://kj2386.github.io/">Back to Main Page</a>
+<a href="https://kj2386.github.io">Back to Main Page</a>
   
 ---
 
