@@ -22,7 +22,7 @@ public class WebPageController {
 
     NumberFormat numberFormat = NumberFormat.getNumberInstance();
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String showWebPage(Model theModel) {
 
 
