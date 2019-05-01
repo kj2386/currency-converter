@@ -4,7 +4,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
 
-
 @RedisHash("Currency")
 public class Currency {
     @Id

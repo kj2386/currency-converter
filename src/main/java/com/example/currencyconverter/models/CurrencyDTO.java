@@ -10,9 +10,9 @@ public class CurrencyDTO {
     private String date;
     private Map<String, Double> rates;
 
-   public CurrencyDTO() {
+    public CurrencyDTO() {
 
-   }
+    }
 
     public CurrencyDTO(boolean success, long timestamp, String base, String date, Map<String, Double> rates) {
         this.success = success;
@@ -23,7 +23,7 @@ public class CurrencyDTO {
     }
 
     public boolean isSuccess() {
-       return success;
+        return success;
     }
 
     public void setSuccess(boolean success) {

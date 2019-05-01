@@ -17,12 +17,12 @@ import com.example.currencyconverter.services.CurrencyService;
 @RestController
 public class ListAllCurrenciesController {
 
-	@Autowired
-	CurrencyService currencyService;
+    @Autowired
+    CurrencyService currencyService;
 
-	// List all currencies
-	@RequestMapping(value = "/currencies", produces = { "application/json" }, method = RequestMethod.GET)
-	public ResponseEntity<List<Currency>> getAllCurrencies() {
-		return new ResponseEntity<>(this.currencyService.getAllCurrencies(), HttpStatus.OK);
-	}
+    // List all currencies
+    @RequestMapping(value = "/currencies", produces = {"application/json"}, method = RequestMethod.GET)
+    public ResponseEntity<List<Currency>> getAllCurrencies() {
+        return new ResponseEntity<>(this.currencyService.getAllCurrencies(), HttpStatus.OK);
+    }
 }

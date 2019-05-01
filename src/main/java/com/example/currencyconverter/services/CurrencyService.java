@@ -18,7 +18,6 @@ public class CurrencyService {
     private CurrencyRepository currencyRepository;
 
 
-
     public CurrencyService(CurrencyRepository currencyRepository) {
 
         this.currencyRepository = currencyRepository;
@@ -31,29 +30,25 @@ public class CurrencyService {
     }
 
     public Optional<Double> convert(ConversionCurrency conversionCurrency) {
-       Optional<Currency> toOptional = this.currencyRepository.findById(conversionCurrency.getTo());
-       Optional<Currency> fromOptional = this.currencyRepository.findById(conversionCurrency.getFrom());
+        Optional<Currency> toOptional = this.currencyRepository.findById(conversionCurrency.getTo());
+        Optional<Currency> fromOptional = this.currencyRepository.findById(conversionCurrency.getFrom());
 
-       if (toOptional.isPresent() && fromOptional.isPresent()) {
-           Currency to = toOptional.get();
-           Currency from = fromOptional.get();
-           Double toValue = to.getValueInEuros();
-           Double fromValue = from.getValueInEuros();
+        if (toOptional.isPresent() && fromOptional.isPresent()) {
+            Currency to = toOptional.get();
+            Currency from = fromOptional.get();
+            Double toValue = to.getValueInEuros();
+            Double fromValue = from.getValueInEuros();
 
-           Double answer = toValue * conversionCurrency.getValue() / fromValue;
-           Double result = Math.round(answer * 100.0) / 100.0;
+            Double answer = toValue * conversionCurrency.getValue() / fromValue;
+            Double result = Math.round(answer * 100.0) / 100.0;
 
-           return Optional.of(result);
-       }
+            return Optional.of(result);
+        }
 
 
-       return Optional.empty();
+        return Optional.empty();
 
     }
-
-
-
-
 
 
 }

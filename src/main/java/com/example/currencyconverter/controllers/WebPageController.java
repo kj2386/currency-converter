@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.text.NumberFormat;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 @Controller
@@ -53,7 +52,7 @@ public class WebPageController {
 
         if (answer.isPresent()) {
 
-           conversionCurrency.setResult(answer.get());
+            conversionCurrency.setResult(answer.get());
             return "currency-converter";
         }
 

@@ -1,14 +1,12 @@
 package com.example.currencyconverter.models;
 
 
-
 public class ConversionCurrency {
 
 
     private String to;
 
     private String from;
-
 
     private Double value;
 
