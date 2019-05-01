@@ -1,7 +1,3 @@
-<a href="https://kj2386.github.io">Back to Main Page</a>
-  
----
-
 ## Currency Converter
 
 **Project description:** Currency converter using fixer.io currency API to get current currency exchange rates every 5 hours and saving it onto a Redis database. This task is automatic in the background. From the main page, you can convert between 2 currencies and the result will be rounded to two decimal places. Used Spring Boot and Spring MVC.  For the complete project code, see it on Github [here](https://github.com/kj2386/currency-converter).
